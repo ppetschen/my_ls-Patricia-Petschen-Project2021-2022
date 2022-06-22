@@ -1,11 +1,11 @@
 /*
 ** EPITECH PROJECT, 2021
-** my_putchar.c
+** my_putchar
 ** File description:
-** Writes a char
+** prints char
 */
 
-#include "../include/lib.h"
+#include <unistd.h>
 
 void my_putchar(char c)
 {

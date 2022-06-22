@@ -1,13 +1,13 @@
 /*
 ** EPITECH PROJECT, 2021
-** my_putstr.c
+** my_putstr
 ** File description:
-** Writes a string
+** prints str
 */
 
-#include "../include/lib.h"
+void my_putchar(char c);
 
-void my_putstr(char *str)
+void my_putstr(char const *str)
 {
     int i = 0;
 

@@ -5,8 +5,7 @@
 ** Returns the sum of two strings
 */
 
-#include "../include/lib.h"
-#include "../include/my_ls.h"
+#include "my_ls.h"
 
 char *my_strcat(char *dest, char *src)
 {
@@ -26,5 +25,5 @@ char *my_strcat(char *dest, char *src)
         i++;
         j++;
     }
-    return result;
+    return (result);
 }

@@ -1,63 +1,34 @@
 /*
 ** EPITECH PROJECT, 2021
-** my_ls.h
+** my_ls
 ** File description:
-** It declares all needed functions and headers
+** makefile
 */
 
 #ifndef MY_LS_H_
-    #define MY_LS_H_
+#define MY_LS_H_
 
-    //Delete before push
-    #include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <dirent.h>
+#include <stdio.h>
+#include <grp.h>
+#include <stdlib.h>
+#include <time.h>
+#include <pwd.h>
+#include <utime.h>
+#include <sys/time.h>
 
-    //Opendir
-    #include <sys/types.h>
-    #include <dirent.h>
-
-    //Malloc
-    #include <stdlib.h>
-
-    //Stat
-    #include <sys/stat.h>
-    #include <unistd.h>
-
-    //Pw
-    #include <pwd.h>
-    #include <grp.h>
-
-    //Time
-    #include <time.h>
-
-typedef struct flag {
-    char type;
-    int checked;
-} flag_t;
-
-typedef struct l_format {
-    char *permission;
-    int nb;
-    char *user;
-    char *name;
-    int nb2;
-    char *date;
-    char *file_name;
-} l_format_t;
-
-
-//my_ls.c
-flag_t *detect_flags(int ac, char **av, flag_t *flags);
-int is_folder(char *str);
-void print_folder(char *arg, flag_t *flags);
-int is_file(char *str);
-
-//flags.c
-void l_format(struct dirent *, int *, char *);
-
-//initialize_struct.c
-flag_t *initialize_flags(void);
-
-//flags.c
-void flags_list(struct dirent *, flag_t *, int *, char *);
+void my_putstr(char const *);
+int my_put_nbr(int);
+void my_putchar(char c);
+void info(struct dirent *entry);
+int no_flag(int nb);
+void flag_one(char *);
+char *my_int_to_str(int nbr);
+char *my_strcat(char *dest, char *src);
+int my_strlen(char *str);
 
 #endif /* !MY_LS_H_ */
